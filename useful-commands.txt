@@ -1,0 +1,16 @@
+rails generate migration CreateUser name:string
+rails generate migration CreateGroup user:references name:string icon:string
+rails generate migration CreateTransaction user:references name:string amount:float
+
+
+# To create many to many relationship btw Group and Transaction tables
+rails generate migration CreateJoinTableGroupTransactions group transaction
+
+
+
+
+rails db:migrate:up VERSION=4
+
+
+Payment.joins(:groups).pluck(:id, :'groups.id')
+

@@ -13,4 +13,6 @@ rails db:migrate:up VERSION=4
 
 
 Payment.joins(:groups).pluck(:id, :'groups.id')
+Payment.joins(:groups).pluck(:name, :'groups.name')
+
 

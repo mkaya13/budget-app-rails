@@ -1,0 +1,21 @@
+<div class="back-link">
+<%= link_to "<", root_path %>
+</div>
+<h2>Add new Group</h2>
+<%= form_with model: @group, url: user_groups_path(user_id: @user.id) , local: true do |f| %>
+
+<div>
+  <div>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :icon %><br>
+    <%= f.text_field :icon %>
+  </div>
+
+  <%= f.submit %> <br>
+</div>
+
+<% end %>

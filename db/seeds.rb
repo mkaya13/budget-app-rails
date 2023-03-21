@@ -8,7 +8,7 @@
 
 puts "Seeds adding data ..."
 
-user_mert = User.create(name:"Mert")
+user_mert = User.create(name:"Mert", email:"mert@hotmail.com", password: "12345678", role:"user")
 group_financial = Group.create(user:user_mert, name:"Financial", icon:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLHJ5rsDX4MDD0RKixJpMM733IVFMUn42ag&usqp=CAU")
 group_sport = Group.create(user:user_mert, name:"Sport", icon:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP9328h-fcBG-597LoD_XKwbe9OSetI7vF_g&usqp=CAU")
 payment_stock = Payment.create(user:user_mert, name:"Stock", amount: 1000.5)

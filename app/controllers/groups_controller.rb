@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def index
     @user = current_user
     @groups = User.find_by(id: current_user.id)&.groups || []
@@ -21,6 +22,8 @@ class GroupsController < ApplicationController
       :'payments.name', :'payments.amount', :'payments.created_at'
     )
   end
+  # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
+
 
   def new
     @user = current_user

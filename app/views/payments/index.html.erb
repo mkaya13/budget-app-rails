@@ -1,0 +1,22 @@
+<div class="payments-holder">
+
+  <div class="group-title-section">
+
+  <div class="back-link">
+    <%= link_to "<", root_path %>
+  </div>
+  <h1>Payment Groups</h1>
+  <p></p>
+  </div>
+
+  <div class="payments">
+  
+  <h1>All Payments</h1>
+
+
+  <% @payments.each_with_index do |payment, index| %>
+    <%= render payment %>
+    <h4>Payment Group: <%= @groups_for_payments[index] %></h4>
+  <% end %>
+  </div>
+</div>

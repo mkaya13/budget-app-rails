@@ -24,7 +24,6 @@ class GroupsController < ApplicationController
   end
   # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
 
-
   def new
     @user = current_user
     @group = Group.new

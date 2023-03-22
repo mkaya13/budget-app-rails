@@ -41,6 +41,8 @@ This project a functional Budget App created using Ruby on Rails. It allows user
     <li><a href="https://rubyonrails.org/">Rails</a></li>
     <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
     <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
+     <li><a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api#:~:text=choose%20Red%20Hat%3F-,Overview,by%20computer%20scientist%20Roy%20Fielding.">RestAPI</a></li>
   </ul>
 
 ### Key Features <a name="key-features"></a>

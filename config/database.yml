@@ -83,8 +83,12 @@ test:
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
+#production:
+#  <<: *default
+#  database: <%= ENV['DATABASE_NAME'] + 'production' %>
+#  username: <%= ENV['DATABASE_USERNAME'] %>
+#  password: <%= ENV['DATABASE_PASSWORD'] %>
+
 production:
   <<: *default
-  database: <%= ENV['DATABASE_NAME'] + 'production' %>
-  username: <%= ENV['DATABASE_USERNAME'] %>
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>

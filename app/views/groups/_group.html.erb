@@ -3,7 +3,7 @@
     <%= image_tag(group.icon) %>
     <h2><%= group.name %> </h2>
 
-    <div class="payment-metrics-each-group"><h3>Payments: </h3><p><%= @payments_per_group[group.name] != nil ? @payments_per_group[group.name] : 0%></p>
+    <div class="payment-metrics-each-group"><p><%= @payments_per_group[group.name] != nil ? @payments_per_group[group.name] : 0%></p>
 
     </div>
     </div>

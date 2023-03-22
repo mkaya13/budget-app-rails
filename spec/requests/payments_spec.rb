@@ -7,9 +7,8 @@ RSpec.describe 'PaymentsController', type: :request do
       user.password = Devise.friendly_token.first(8)
       user.confirmed_at = Time.now
 
-    Group.new(user_id: 1, name: 'Financial', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLHJ5rsDX4MDD0RKixJpMM733IVFMUn42ag&usqp=CAU')
-    Payment.new(user_id: 1, name: 'Food', amount: 25.5)   
-     
+      Group.new(user_id: 1, name: 'Financial', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLHJ5rsDX4MDD0RKixJpMM733IVFMUn42ag&usqp=CAU')
+      Payment.new(user_id: 1, name: 'Food', amount: 25.5)
     end
   end
 

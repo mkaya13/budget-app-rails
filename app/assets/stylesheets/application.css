@@ -228,16 +228,14 @@ form input {
     gap: 0.25rem;
   }
 
-  .payment-metrics-each-group p {
-    font-size: 1.2rem;
-  }
-
   .totals-display {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
   }
 
   .each-group-item {
@@ -274,12 +272,6 @@ form input {
     padding-left: 2.5%;
     width: 90%;
     min-width: 18rem;
-  }
-
-  .totals-display {
-    flex-direction: column;
-    gap: 0;
-    margin-bottom: 0;
   }
 
   .group-show-table {

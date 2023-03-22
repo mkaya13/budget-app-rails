@@ -23,7 +23,6 @@
     <div class="payment-metrics-each-group"><p><%=  @records_array[index]["payment_amount"] %>$</p></div>
     </div>
   <% end %>
-  <div class="delete-button"><%= button_to "Delete", user_group_path(group.user_id, group.id), method: :delete %></div>
   </div>
   <% end %>
   </div>

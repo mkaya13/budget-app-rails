@@ -291,9 +291,6 @@ form input {
   .middle-one {
     display: flex;
     flex-direction: column;
-    justify-content: none;
-    align-items: none;
-    align-content: none;
   }
 
   .group-created-date {

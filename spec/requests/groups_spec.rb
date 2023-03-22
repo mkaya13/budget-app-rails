@@ -5,7 +5,6 @@ RSpec.describe 'GroupsController', type: :request do
     User.find_or_create_by(email: 'mert@gmail.com') do |user|
       user.name = 'mert'
       user.password = Devise.friendly_token.first(8)
-      user.confirmed_at = Time.now
     end
   end
 
@@ -16,7 +15,7 @@ RSpec.describe 'GroupsController', type: :request do
   describe 'GET users/1/groups/' do
     # Get lists of all groups
     it 'returns a 200 status response' do
-      get user_groups_path
+      get user_groups_path(user_id: 1)
       expect(response).to be_successful
       expect(response).to have_http_status(200)
     end

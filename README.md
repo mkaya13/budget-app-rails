@@ -6,7 +6,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-    <!-- - [🚀 Live Demo](#live-demo) -->
+    - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -51,6 +51,10 @@ This project a functional Budget App created using Ruby on Rails. It allows user
 - **Authentication and Authorization**
 - **Table Logic**
 - **Add Data to DB**
+
+### Live Demo <a name="live-demo"></a>
+
+[Live Demo](https://budget-application-h4ld.onrender.com)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

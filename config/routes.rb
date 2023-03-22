@@ -4,11 +4,10 @@ Rails.application.routes.draw do
 
   resources :users, only: [:index, :show] do
     resources :groups, only: [:new, :create, :index, :show, :destroy] do
-      resources :payments, only: [:new, :create, :index, :show] do
-      end
-    end
-
-    resources :payments, only: [:index, :new, :create] do
+      resources :payments, only: [:new, :create, :index, :show, :destroy]
     end
   end
+
+  #resources :payments, only: [:index, :new, :create] do
+  #end
 end

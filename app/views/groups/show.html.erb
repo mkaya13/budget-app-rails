@@ -19,6 +19,7 @@
   <th> Name </th>
   <th> Amount </th>
   <th> Created Date </th>
+  <th> Actions </th>
 </tr>
 
 <% @payments_each_group_each_user.each do |payment| %>
@@ -26,6 +27,11 @@
       <td><%=payment.name %></td>
       <td><%=payment.amount %></td>
       <td><%= payment.created_at.localtime.strftime("%B %d, %Y %l:%M %p %Z") %></td>
+      <td>  
+        <div class="delete-button"><%= button_to "- Delete", user_group_payment_path(payment.user_id, @group[0][2], payment.id), method: :delete %></div>
+      </td>
+      
+
     </tr>
 
 <% end %>

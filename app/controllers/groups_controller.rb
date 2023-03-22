@@ -24,10 +24,10 @@ class GroupsController < ApplicationController
 
   def show
     @user = User.find_by(id: current_user.id)
-    @group = @user&.groups&.where(id: params['id'])&.pluck(:name, :icon) || []
+    @group = @user&.groups&.where(id: params['id'])&.pluck(:name, :icon, :id) || []
     @payments_each_group_each_user = @user&.groups&.where(id: params['id'])
     &.joins(:payments)&.select(
-      :'payments.name', :'payments.amount', :'payments.created_at'
+      :'payments.name', :'payments.amount', :'payments.created_at', :'groups.id', :user_id, :'payments.id'
     )
   end
   # rubocop:enable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity

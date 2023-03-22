@@ -1,9 +1,8 @@
 <div class="back-link">
-<%= link_to "<", root_path %>
+<%= link_to "<--", root_path %>
 </div>
 
 <div class="groups-show">
-
 
 <div class="group-show-title">
 <%= image_tag(@group[0][1], {:style => "width:7.5rem;"}) %>
@@ -13,7 +12,6 @@
 <div class="add-new-payment">
 <%= button_to "+ Add New Payment", new_user_group_payment_path(user_id: params["user_id"], group_id: params["id"]), method: :get %>
 </div>
-
 
 <div class="group-show-table">
 <table class="table table-sm table-striped table-bordered border-dark " id="group-show-bt-table">

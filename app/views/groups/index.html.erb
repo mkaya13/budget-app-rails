@@ -2,20 +2,24 @@
 
   <div class="group-title-section">
 
-  <%= image_tag("https://cdn-icons-png.flaticon.com/512/6229/6229280.png") %>
-  <h1>Payment Groups</h1>
-  <%= button_to "+ Add New Group", new_user_group_path(@user.id), method: :get %>
+  <a href="#" class="toggle-button">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  </a>
+
+  <h1 class="transactions">TRANSACTIONS</h1>
+  <%= render :partial => 'mag' %>
   </div>
-
-
-  <div class="groups">
-    <div class="totals-display">
-    <div class="payment-metrics-each-group"><h3>Total Groups: </h3> <p><%= @total_group %></p></div>
-    <div class="payment-metrics-each-group"><h3>Total Payments: </h3> <p><%= @total_payment_count %></p></div>
-    <div class="payment-metrics-each-group"><h3>Total Expenses: </h3> <p><%= @total_payment_sum %>$</p></div>
+  <div class="extra-layer">
+    <div class="inner-layer">
+      <p>Gift Credit</p>
+      <p>$45.00</p>
+    </div>
   </div>
 
   <% @ordered_groups.each_with_index do |group, index| %>
+  <div class="each-group-item-list">
   <div class="single-group">
     <%= link_to user_group_path(group.user_id, group.id), {:style=>'text-decoration:none; color:black;'} do %>
     <div class="each-group-item">
@@ -26,4 +30,10 @@
   </div>
   <% end %>
   </div>
+  <div class="add-transaction-holder">
+  <%= button_to "SCAN", new_user_group_path(@user.id), method: :get %>
+  </div>
+
+  </div>
+
 </div>

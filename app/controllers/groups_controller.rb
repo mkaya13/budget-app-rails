@@ -1,16 +1,24 @@
 class GroupsController < ApplicationController
+  def recent_groups(metric)
+    metric.order(created_at: :desc)
+  end
+
   # rubocop:disable Metrics/PerceivedComplexity,Metrics/CyclomaticComplexity
   def index
     @user = current_user
     @groups = User.find_by(id: current_user.id)&.groups || []
-    @total_payment_count = User.find_by(id: current_user.id)&.payments&.count
-    @total_payment_sum = User.find_by(id: current_user.id)&.payments&.select(:'payments.amount')&.sum(:amount)
+    @ordered_groups = recent_groups(@groups)
+    @total_payment_count = User.find_by(id: current_user.id)&.payments&.joins(:groups)&.count
+    @total_payment_sum = User.find_by(id: current_user.id)&.payments&.joins(:groups)
+    &.select(:'payments.amount')&.sum(:amount)
     @payments_per_group = @groups.joins(:payments).group(:name).count
+    @total_group = Group.all.where(user_id: @user.id).count
 
-    sql = "Select groups.name as group_name, COALESCE(SUM(payments.amount), 0) as payment_amount from groups
-      LEFT JOIN groups_payments ON groups.id = groups_payments.group_id
-      LEFT JOIN payments ON payments.id = groups_payments.payment_id
-      GROUP BY groups.name ORDER BY payment_amount DESC, group_name DESC"
+    sql = "Select groups.name as group_name, groups.created_at as created_at,
+    COALESCE(SUM(payments.amount), 0) as payment_amount from groups
+    LEFT JOIN groups_payments ON groups.id = groups_payments.group_id
+    LEFT JOIN payments ON payments.id = groups_payments.payment_id
+    GROUP BY groups.name, groups.created_at ORDER BY created_at DESC"
     @records_array = ActiveRecord::Base.connection.execute(sql)
   end
 
@@ -40,6 +48,16 @@ class GroupsController < ApplicationController
     else
       flash[:error] = "Invalid input, group didn't get saved"
       render :new
+    end
+  end
+
+  def destroy
+    @group = Group.find(params[:id])
+    @group.destroy
+    #  redirect_to recipes_path, notice: 'Recipe was successfully Deleted.'
+    respond_to do |format|
+      format.html { redirect_to user_groups_path(params[:user_id]), notice: 'Group was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 

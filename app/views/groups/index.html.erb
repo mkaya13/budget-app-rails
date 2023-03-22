@@ -7,17 +7,24 @@
   <%= button_to "+ Add New Group", new_user_group_path(@user.id), method: :get %>
   </div>
 
-  <div class="groups">
-  <div class="payment-metrics-each-group"><h3>Total Payments: </h3> <p><%= @total_payment_count %></p></div>
-  <div class="payment-metrics-each-group"><h3>Total Amounts: </h3> <p><%= @total_payment_sum %></p></div>
 
-  <% @groups.each_with_index do |group, index| %>
+  <div class="groups">
+  <div class="totals-display">
+  <div class="payment-metrics-each-group"><h3>Total Groups: </h3> <p><%= @total_group %></p></div>
+  <div class="payment-metrics-each-group"><h3>Total Payments: </h3> <p><%= @total_payment_count %></p></div>
+  <div class="payment-metrics-each-group"><h3>Total Expenses: </h3> <p><%= @total_payment_sum %></p></div>
+  </div>
+
+  <% @ordered_groups.each_with_index do |group, index| %>
+  <div class="single-group">
     <%= link_to user_group_path(group.user_id, group.id), {:style=>'text-decoration:none; color:black;'} do %>
     <div class="each-group-item">
     <%= render group %>
-    <div class="payment-metrics-each-group"><h3>Payment Amount: </h3><p><%=  @records_array[index]["payment_amount"] %></p></div>
+    <div class="payment-metrics-each-group"><h3>Expenses: </h3><p><%=  @records_array[index]["payment_amount"] %></p></div>
     </div>
   <% end %>
+  <div class="delete-button"><%= button_to "- Delete", user_group_path(group.user_id, group.id), method: :delete %></div>
+  </div>
   <% end %>
   </div>
 </div>

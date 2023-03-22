@@ -42,6 +42,7 @@ p {
 }
 
 .each-group-item {
+  width: 30rem;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -239,8 +240,11 @@ form input {
   }
 
   .each-group-item {
+    min-width: 22rem;
+    width: 100%;
     gap: 0.5rem;
-    padding: 1rem 0.1rem 1rem 0.1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    justify-content: space-between;
   }
 
   .group-profile {
@@ -272,17 +276,93 @@ form input {
     padding-left: 1%;
   }
 
-  .single-group a {
-    padding-left: 2.5%;
-    width: 90%;
-    min-width: 18rem;
-  }
-
   .group-show-table {
     width: 90%;
   }
 
   .group-show-title {
     width: 90%;
+  }
+
+  .groups-holder {
+    gap: 0;
+  }
+
+  .middle-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group-created-date {
+    font-size: 0.7rem;
+  }
+
+  .toggle-button {
+    right: 4%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 19px;
+    display: flex;
+  }
+
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .transactions {
+    font-size: 1rem;
+  }
+
+  .add-transaction-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-left: 0.25rem;
+    margin-top: 3rem;
+    height: 4rem;
+    background-color: #60b524;
+  }
+
+  .add-transaction-holder button {
+    padding: 0.5rem 8.5rem 0.5rem 8.5rem;
+    background-color: #60b524;
+    border: 1px solid white;
+    color: white;
+  }
+
+  .extra-layer {
+    width: 100%;
+    background-color: white;
+  }
+
+  .inner-layer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .each-group-item-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
   }
 }

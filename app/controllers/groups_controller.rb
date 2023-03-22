@@ -35,6 +35,8 @@ class GroupsController < ApplicationController
   def new
     @user = current_user
     @group = Group.new
+    puts "Where is the user?"
+    puts current_user
   end
 
   def create

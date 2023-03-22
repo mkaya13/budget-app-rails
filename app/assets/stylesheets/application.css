@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  min-height: 1000px;
+  background-color: #f1f3f2 !important;
+}
+
 p {
   margin-top: 0;
   margin-bottom: 0;
@@ -44,6 +49,7 @@ p {
   gap: 2rem;
   padding: 1rem 4rem 1rem 4rem;
   border: solid 1px;
+  background-color: white;
 }
 
 .payment-metrics-each-group {
@@ -75,11 +81,16 @@ p {
   align-items: center;
   text-align: center;
   padding: 1rem 1rem 1rem 1rem;
+  background-color: #3373ba;
+}
+
+.group-title-section h1 {
+  color: white;
 }
 
 .group-title-section button,
 .add-new-payment button {
-  background-color: blue;
+  background-color: #60b625;
   color: white;
   padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   cursor: pointer;
@@ -104,7 +115,7 @@ p {
   align-items: center;
   text-align: center;
   gap: 2rem;
-  padding-top: 10rem;
+  padding-top: 2rem;
 }
 
 .group-show-table {
@@ -130,6 +141,7 @@ p {
   border: solid 1px;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   gap: 2rem;
+  background-color: white;
 }
 
 .back-link {
@@ -198,4 +210,83 @@ form input {
   align-items: center;
   text-align: center;
   padding-top: 15%;
+}
+
+.group-profile img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.group-title-section img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media (max-width: 850px) {
+  .payment-metrics-each-group {
+    font-size: 1.2rem;
+    gap: 0.25rem;
+  }
+
+  .payment-metrics-each-group p {
+    font-size: 1.2rem;
+  }
+
+  .totals-display {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .each-group-item {
+    gap: 0.5rem;
+    padding: 1rem 0.1rem 1rem 0.1rem;
+  }
+
+  .group-profile {
+    gap: 0.5rem;
+  }
+
+  .group-profile h2 {
+    font-size: 1.1rem;
+  }
+
+  .payment-metrics-each-group h3 {
+    font-size: 1.1rem;
+  }
+
+  .payment-metrics-each-group p {
+    font-size: 1rem;
+  }
+
+  .group-profile img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .delete-button button {
+    padding: 0.05rem 0.1rem 0.05rem 0.1rem;
+  }
+
+  .single-group a {
+    padding-left: 2.5%;
+    width: 90%;
+    min-width: 18rem;
+  }
+
+  .totals-display {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .group-show-table {
+    width: 90%;
+  }
+
+  .group-show-title {
+    width: 90%;
+  }
 }

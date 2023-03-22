@@ -1,3 +1,5 @@
+# require 'uri'
+
 class Group < ApplicationRecord
   belongs_to :user
   has_and_belongs_to_many :payments, dependent: :destroy
@@ -7,5 +9,7 @@ class Group < ApplicationRecord
   validates :user_id, presence: true
 
   validates :name, length: { minimum: 2, maximum: 50 }
-  validates :icon, length: { minimum: 1, maximum: 800 }
+  validates :icon, length: { minimum: 1, maximum: 10000 }
+#  validates :icon, format: { with: /\A#{URI::DEFAULT_PARSER.make_regexp(['http', 'https'])}\.(png|jpg|jpeg|gif)\z/i }, allow_blank: true
+
 end

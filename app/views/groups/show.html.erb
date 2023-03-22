@@ -26,9 +26,9 @@
     <tr>
       <td><%=payment.name %></td>
       <td><%=payment.amount %></td>
-      <td><%= payment.created_at.localtime.strftime("%B %d, %Y %l:%M %p %Z") %></td>
+      <td><%= payment.created_at.localtime.strftime("%B %d, %Y %l:%M %p") %></td>
       <td>  
-        <div class="delete-button"><%= button_to "- Delete", user_group_payment_path(payment.user_id, @group[0][2], payment.id), method: :delete %></div>
+        <div class="delete-button"><%= button_to "Delete", user_group_payment_path(payment.user_id, @group[0][2], payment.id), method: :delete %></div>
       </td>
       
 

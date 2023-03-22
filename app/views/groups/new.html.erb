@@ -3,7 +3,7 @@
 </div>
 <div class="add-new-group-section"
   <h1>Add New Group</h1>
-  <%= form_with model: @group, url: user_groups_path(user_id: @user.id) , local: true do |f| %>
+  <%= form_with model: @group, url: user_groups_path(user_id: params["user_id"]) , local: true do |f| %>
 
   <div class="form-input-fields">
     <div>

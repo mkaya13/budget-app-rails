@@ -152,6 +152,7 @@ If you like this project, kindly give it a star ⭐️
 - Microverse
 - Ruby on Rails Documentation🙃
 - Every person who inspired this codebase.
+- Original design idea by Gregoire Vella on Behance with changes and updates [Creative Commons license of the design](https://creativecommons.org/licenses/by-nc/4.0/legalcode)
 
 ## 📝 License <a name="license"></a>
 

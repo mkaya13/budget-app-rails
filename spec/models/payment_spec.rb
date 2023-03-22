@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Payment, type: :model do
   subject do
-    Payment.new(user_id:1, name:"Food", amount:25.5)
+    Payment.new(user_id: 1, name: 'Food', amount: 25.5)
   end
 
   before { subject.save }

@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :model do
   subject do
-    Group.new(user_id:1, name:"Financial", icon:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLHJ5rsDX4MDD0RKixJpMM733IVFMUn42ag&usqp=CAU")
+    Group.new(user_id: 1, name: 'Financial', icon: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtLHJ5rsDX4MDD0RKixJpMM733IVFMUn42ag&usqp=CAU')
   end
 
   before { subject.save }

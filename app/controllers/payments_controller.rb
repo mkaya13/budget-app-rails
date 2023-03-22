@@ -7,11 +7,18 @@ class PaymentsController < ApplicationController
   def show; end
 
   def new
-    puts '----------'
-    puts 'new'
     @user = current_user
     @payment = Payment.new
-    puts 'new finished'
+  end
+
+  def destroy
+    @payment = User.find(params[:user_id]).groups.find(params[:group_id]).payments.find_by(id: params[:id])
+    @payment.destroy
+    redirect_to user_group_path(params[:user_id], params[:group_id]), notice: 'Payment was successfully Deleted.'
+    # respond_to do |format|
+    #  format.html { redirect_to user_groups_path(params[:user_id]), notice: 'Group was successfully destroyed.' }
+    #  format.json { head :no_content }
+    # end
   end
 
   def create

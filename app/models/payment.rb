@@ -7,4 +7,8 @@ class Payment < ApplicationRecord
   validates :user_id, presence: true, numericality: { only_integer: true }
 
   validates :name, length: { minimum: 2, maximum: 50 }
+
+  def total_price
+    @groups.each(&:amount).sum
+  end
 end

@@ -55,6 +55,7 @@ This project a functional Budget App created using Ruby on Rails. It allows user
 ### Live Demo <a name="live-demo"></a>
 
 [Live Demo](https://budget-application-h4ld.onrender.com)
+[Video](https://www.loom.com/share/60cffd7efa684017b75a5b4391626ff1)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 

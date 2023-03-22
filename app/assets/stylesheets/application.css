@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 1000px;
+  background-color: #f1f3f2 !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.groups-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.groups link {
+  text-decoration: none;
+}
+
+.group-profile {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.each-group-item {
+  width: 30rem;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 4rem 1rem 4rem;
+  border: solid 1px;
+  background-color: white;
+}
+
+.payment-metrics-each-group {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.payment-metrics-each-group p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-bottom: 0;
+  margin-top: 0.55rem;
+}
+
+.group-title-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1rem 1rem 1rem;
+  background-color: #3373ba;
+}
+
+.group-title-section h1 {
+  color: white;
+}
+
+.group-title-section button,
+.add-new-payment button {
+  background-color: #60b625;
+  color: white;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.delete-button button {
+  background-color: red;
+  color: white;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.single-group a {
+  width: 90%;
+}
+
+.groups-show {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.group-show-table {
+  width: 60%;
+}
+
+.group-show-table th {
+  border: 10px solid #ddd;
+}
+
+#group-show-bt-table th {
+  background-color: darkblue;
+  color: #fff;
+}
+
+.group-show-title {
+  display: flex;
+  width: 60%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border: solid 1px;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  gap: 2rem;
+  background-color: white;
+}
+
+.back-link {
+  color: black;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: black;
+}
+
+.payments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.totals-display {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.add-new-group-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.add-new-payment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+form input {
+  width: 20rem;
+}
+
+.single-group {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.login-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.group-profile img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.group-title-section img {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+@media (max-width: 850px) {
+  .payment-metrics-each-group {
+    font-size: 1.2rem;
+    gap: 0.25rem;
+  }
+
+  .totals-display {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .each-group-item {
+    min-width: 22rem;
+    width: 100%;
+    gap: 0.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    justify-content: space-between;
+  }
+
+  .group-profile {
+    gap: 0.5rem;
+  }
+
+  .group-profile h2 {
+    font-size: 1.1rem;
+  }
+
+  .payment-metrics-each-group h3 {
+    font-size: 1.1rem;
+  }
+
+  .payment-metrics-each-group p {
+    font-size: 1rem;
+  }
+
+  .group-profile img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .delete-button button {
+    padding: 0.05rem 0.1rem 0.05rem 0.1rem;
+  }
+
+  .single-group {
+    padding-left: 1%;
+  }
+
+  .group-show-table {
+    width: 90%;
+  }
+
+  .group-show-title {
+    width: 90%;
+  }
+
+  .groups-holder {
+    gap: 0;
+  }
+
+  .middle-one {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .group-created-date {
+    font-size: 0.7rem;
+  }
+
+  .toggle-button {
+    right: 4%;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 19px;
+    display: flex;
+  }
+
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .transactions {
+    font-size: 1rem;
+  }
+
+  .add-transaction-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin-left: 0.25rem;
+    margin-top: 3rem;
+    height: 4rem;
+    background-color: #60b524;
+  }
+
+  .add-transaction-holder button {
+    padding: 0.5rem 8.5rem 0.5rem 8.5rem;
+    background-color: #60b524;
+    border: 1px solid white;
+    color: white;
+  }
+
+  .extra-layer {
+    width: 100%;
+    background-color: white;
+  }
+
+  .inner-layer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    padding-top: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .each-group-item-list {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}

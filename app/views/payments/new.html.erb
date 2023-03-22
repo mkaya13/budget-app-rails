@@ -1,0 +1,33 @@
+
+<div class="back-link">
+<%= link_to "<--", root_path %>
+</div>
+<div class="add-new-payment">
+<h2>Add new Payment</h2>
+<%= form_with model: @payment, url: user_group_payments_path(user_id: params["user_id"], group_id: params["group_id"]) , local: true do |f| %>
+
+<div>
+  <div>
+    <%= f.label :name %> <br>
+    <%= f.text_field :name, :required => true %>
+  </div>
+
+  <div>
+    <%= f.label :amount %><br>
+    <%= f.text_field :amount, :required => true %>
+  </div>
+
+  </br>
+  
+  <%= f.label :group %>
+  <%= f.select :group, options_from_collection_for_select(Group.all, :id, :name, params["group_id"]) %>
+  </br>
+  </br>
+
+
+
+  <%= f.submit %> <br>
+</div>
+
+<% end %>
+</div>

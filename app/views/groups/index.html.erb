@@ -1,0 +1,39 @@
+<div class="groups-holder">
+
+  <div class="group-title-section">
+
+  <a href="#" class="toggle-button">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+  </a>
+
+  <h1 class="transactions">TRANSACTIONS</h1>
+  <%= render :partial => 'mag' %>
+  </div>
+  <div class="extra-layer">
+    <div class="inner-layer">
+      <p>Gift Credit</p>
+      <p>$45.00</p>
+    </div>
+  </div>
+
+  <% @ordered_groups.each_with_index do |group, index| %>
+  <div class="each-group-item-list">
+  <div class="single-group">
+    <%= link_to user_group_path(group.user_id, group.id), {:style=>'text-decoration:none; color:black;'} do %>
+    <div class="each-group-item">
+    <%= render group %>
+    <div class="payment-metrics-each-group"><p><%=  @records_array[index]["payment_amount"] %>$</p></div>
+    </div>
+  <% end %>
+  </div>
+  <% end %>
+  </div>
+  <div class="add-transaction-holder">
+  <%= button_to "SCAN", new_user_group_path(@user.id), method: :get %>
+  </div>
+
+  </div>
+
+</div>
